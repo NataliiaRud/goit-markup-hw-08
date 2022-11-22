@@ -12,6 +12,8 @@
   background-image: var(--gradient), url(../images/hero-mob.jpg);
   @include retina {
     background-image: var(--gradient), url(../images/hero-mob2x.jpg);
+    height: 400px;
+    padding: 118px 0;
   }
   @include tablet {
     background-image: var(--gradient), url(../images/hero-tab.jpg);

@@ -7,8 +7,11 @@
   transition: opacity 250ms var(--transition-time), visibility 250ms var(--transition-time);
 }
 .modal {
-  width: 450px;
-  min-height: 609px;
+  width: 95%;
+  max-width: 450px;
+  height: 95%;
+  max-height: 609px;
+  overflow: scroll;
   background-color: var(--hero-color);
   padding: 40px;
   position: absolute;
@@ -20,8 +23,9 @@
     0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 4px;
   @include desktop {
-    width: 528px;
+    min-width: 528px;
     min-height: 581px;
+    overflow: visible;
   }
 }
 .backdrop.is-hidden .modal {

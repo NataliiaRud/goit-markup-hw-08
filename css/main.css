@@ -355,7 +355,7 @@ body {
 }
 
 .mob-menu-list {
-  margin-bottom: 306px;
+  margin-bottom: auto;
 }
 
 .mob-menu-list__item:not(:last-child) {
@@ -431,6 +431,8 @@ body {
 @media (min-device-pixel-ratio: 2), (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
   .hero-part {
     background-image: var(--gradient), url(../images/hero-mob2x.jpg);
+    height: 400px;
+    padding: 118px 0;
   }
 }
 @media screen and (min-width: 768px) {
@@ -586,8 +588,8 @@ body {
 
 .team__title {
   font-weight: 700;
-  font-size: 36px;
-  line-height: 1.16;
+  font-size: 28px;
+  line-height: 1.17;
   text-align: center;
   color: var(--main-color-text);
   margin-bottom: 30px;
@@ -595,6 +597,8 @@ body {
 @media screen and (min-width: 1200px) and (min-width: 1200px) {
   .team__title {
     margin-bottom: 50px;
+    font-size: 36px;
+    line-height: 1.16;
   }
 }
 
@@ -602,6 +606,7 @@ body {
   display: flex;
   flex-wrap: wrap;
   gap: 30px;
+  justify-content: center;
 }
 
 .team__item {
@@ -678,8 +683,8 @@ body {
 
 .brands__title {
   font-weight: 700;
-  font-size: 36px;
-  line-height: 1.16;
+  font-size: 28px;
+  line-height: 1.17;
   text-align: center;
   color: var(--main-color-text);
   margin-bottom: 30px;
@@ -687,6 +692,8 @@ body {
 @media screen and (min-width: 1200px) and (min-width: 1200px) {
   .brands__title {
     margin-bottom: 50px;
+    font-size: 36px;
+    line-height: 1.16;
   }
 }
 
@@ -747,6 +754,7 @@ body {
 .foot__container {
   display: flex;
   flex-direction: column;
+  align-items: baseline;
 }
 @media screen and (min-width: 768px) {
   .foot__container {
@@ -969,6 +977,7 @@ body {
 .galery__list {
   display: flex;
   flex-wrap: wrap;
+  row-gap: 15px;
   justify-content: flex-start;
   gap: 8px;
   margin-bottom: 40px;
@@ -997,12 +1006,17 @@ body {
   background: var(--section-bg);
   cursor: pointer;
   border-radius: 4px;
-  padding: 6px 22px;
+  padding: 6px 25px;
   border-color: transparent;
   border: none;
   transition-property: color, background-color, box-shadow;
   transition-duration: 250ms;
   transition-timing-function: var(--transition-time);
+}
+@media screen and (min-width: 768px) {
+  .galery__btn {
+    padding: 6px 22px;
+  }
 }
 .galery__btn:hover, .galery__btn:focus {
   background-color: var(--accent-color);
@@ -1032,7 +1046,9 @@ body {
 }
 
 .portfolio__card-link {
-  display: block;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
   transition-property: box-shadow;
   transition-duration: 250ms;
   transition-timing-function: var(--transition-time);
@@ -1068,6 +1084,16 @@ body {
   border: 1px solid #eeeeee;
   border-top: none;
 }
+@media screen and (min-width: 768px) {
+  .portfolio__box {
+    flex-grow: 1;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .portfolio__box {
+    flex-grow: 0;
+  }
+}
 
 .portfolio__title {
   font-weight: 700;
@@ -1095,8 +1121,11 @@ body {
 }
 
 .modal {
-  width: 450px;
-  min-height: 609px;
+  width: 95%;
+  max-width: 450px;
+  height: 95%;
+  max-height: 609px;
+  overflow: scroll;
   background-color: var(--hero-color);
   padding: 40px;
   position: absolute;
@@ -1109,8 +1138,9 @@ body {
 }
 @media screen and (min-width: 1200px) {
   .modal {
-    width: 528px;
+    min-width: 528px;
     min-height: 581px;
+    overflow: visible;
   }
 }
 
