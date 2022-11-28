@@ -56,6 +56,7 @@
 .current {
   color: var(--accent-color);
 }
+
 .current::after {
   position: absolute;
   bottom: 0;
@@ -200,6 +201,10 @@
     color: var(--accent-color);
   }
 }
+.current-mobile {
+  color: var(--accent-color);
+}
+
 .contacts-mob {
   margin-bottom: 64px;
 }
@@ -224,7 +229,21 @@
   display: flex;
   gap: 30px;
 }
-
+.soc-menu-list {
+  position: relative;
+}
+.soc-menu-list:not(:first-child)::before {
+  position: absolute;
+  bottom: 11px;
+  left: -26px;
+  content: '';
+  width: 22px;
+  height: 0px;
+  border-radius: 2px;
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  display: block;
+  transform: rotate(90deg);
+}
 .soc-menu-link {
   font-weight: 500;
   font-size: 18px;
