@@ -725,13 +725,9 @@ body {
 }
 
 .brands__item {
+  width: calc((100% - 30px) / 2);
   /* width: calc((100% - 150px) / 6);*/
   height: 90px;
-}
-@media screen and (min-width: 480px) {
-  .brands__item {
-    width: calc((100% - 30px) / 2);
-  }
 }
 @media screen and (min-width: 768px) {
   .brands__item {
@@ -775,18 +771,17 @@ body {
 .foot__container {
   display: flex;
   flex-direction: column;
-  align-items: baseline;
 }
 @media screen and (min-width: 768px) {
   .foot__container {
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: center;
+    align-items: baseline;
   }
 }
 @media screen and (min-width: 1200px) {
   .foot__container {
-    align-items: baseline;
     flex-wrap: nowrap;
   }
 }

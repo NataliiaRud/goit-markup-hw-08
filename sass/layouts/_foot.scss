@@ -6,15 +6,14 @@
 .foot__container {
   display: flex;
   flex-direction: column;
-  align-items: baseline;
 
   @include tablet {
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: center;
+    align-items: baseline;
   }
   @include desktop {
-    align-items: baseline;
     flex-wrap: nowrap;
   }
 }
